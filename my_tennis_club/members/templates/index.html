@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    {% include 'navBar.html' %} 
+
+    <div class="container">
+      <div class="text-content">
+        <h1>In-person computer programming education with live instructors</h1>
+      </div>
+
+      <div class="description">
+        <p>
+          You will go from a novice to a proffesional programmer because wee
+          designed our curriculum and teaching with newcomers in mind.
+        </p>
+      </div>
+
+      <center>
+        <button class="btn">
+          <a href="">explore Courses</a>
+        </button>
+      </center>
+    </div>
+    {% with firstname="Tobias" %}
+    <h1>Hello {{ firstname }}, how are you?</h1>
+    {% endwith %} 
+    {% if greeting == 1 %}
+    <h1>Hello</h1>
+    {% else %}
+    <h1>Bye</h1>
+    {% endif %}
+
+    <h2>{{mydate}}</h2>
+  </body>
+</html>
